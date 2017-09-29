@@ -36,9 +36,9 @@ def welcome():
 
 def get_gender():
     while True:
+        global gender
         gender = question_renderer("What's your gender? Type 'male' or 'female'.")
         # print("What's your gender? Type 'male' or 'female'.")
-        global gender
         if gender != 'male' and gender != 'female':
             continue
         else:
@@ -48,8 +48,8 @@ def get_gender():
 
 def get_name():
     while True:
-        name = question_renderer("What's your name?")
         global name
+        name = question_renderer("What's your name?")
         name = name.lower().capitalize()
         if name == '':
             continue
@@ -96,8 +96,8 @@ def get_hobby():
 
 def get_city():
     while True:
-        city = question_renderer("What city do you live, {}?".format(name))
         global city
+        city = question_renderer("What city do you live, {}?".format(name))
         if city == '':
             typing(1)
             print("Please type the name of your city.")
@@ -226,7 +226,7 @@ def finish():
     input("Press any key to finish ... ")
 
 
-def question_renderer(question, user_input='~ ', type_count=1):
+def question_renderer(question, user_input='~ ', type_count=2):
     while True:
         typing(type_count)
         print(question)
