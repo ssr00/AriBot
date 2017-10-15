@@ -57,9 +57,8 @@ def get_name():
             typing(1)
             print("Please don't type numbers.")
         else:
-            list = ["I like your name.", "I always wanted to have that name.", "My friend has the same name."]
             typing(1)
-            print(choice(list))
+            print(choice(("I like your name.", "I always wanted to have that name.", "My friend has the same name.")))
             break
 
 
@@ -73,12 +72,10 @@ def get_age():
         else:
             if int(age) <= 25:
                 typing(2)
-                list = ["You're still young.", "Being young is very good.", "Enjoy your youth."]
-                print(choice(list))
+                print(choice(("You're still young.", "Being young is very good.", "Enjoy your youth.")))
             elif int(age) > 25:
                 typing(1)
-                list = ["You're getting old already.", "I hope you have enjoyed your teenage years.", "More bills to pay than friends."]
-                print(choice(list))
+                print(choice(("You're getting old already.", "I hope you have enjoyed your teenage years.", "More bills to pay than friends.")))
             break
 
 
@@ -89,8 +86,7 @@ def get_hobby():
             continue
         else:
             typing(1)
-            list = ["I've always wanted to learn that.", "I tried to do it once but I did not like it.", "I like that too!"]
-            print(choice(list))
+            print(choice(("I've always wanted to learn that.", "I tried to do it once but I did not like it.", "I like that too!")))
             break
 
 
@@ -106,13 +102,11 @@ def get_city():
             city_opinion = question_renderer("Do you like to live there?\nType 'yes' or 'no': ", type_count=3)
             if city_opinion.lower() == 'yes':
                 typing(1)
-                list = ["My friends live there and they like this city very much.", "Home sweet home.", "I really want to go there."]
-                print(choice(list))
+                print(choice(("My friends live there and they like this city very much.", "Home sweet home.", "I really want to go there.")))
                 break
             elif city_opinion.lower() == 'no':
                 typing(1)
-                list = ["It's never too late to change!", "A lot of people do not really like this city.", "There are much better places out there."]
-                print(choice(list))
+                print(choice(("It's never too late to change!", "A lot of people do not really like this city.", "There are much better places out there.")))
                 break
 
 
@@ -123,19 +117,16 @@ def get_relationship():
             if relationship.lower() == 'dating':
                 girlfriend = question_renderer("What's her name?")
                 typing(1)
-                list = ["I will pray for you, ", "You're a lucky woman, ", "Not everything is perfect, "]
-                print(choice(list) + girlfriend.lower().capitalize() + ".")
+                print(choice(("I will pray for you, ", "You're a lucky woman, ", "Not everything is perfect, ")) + girlfriend.lower().capitalize() + ".")
                 break
             elif relationship.lower() == 'single':
                 typing(1)
-                list = ["Try to be cool sometimes with people too.", "Best thing in life.", "One day you find someone, you're so cool."]
-                print(choice(list))
+                print(choice(("Try to be cool sometimes with people too.", "Best thing in life.", "One day you find someone, you're so cool.")))
                 break
             elif relationship.lower() == 'married':
                 wife = question_renderer("What's her name?")
                 typing(1)
-                list = ["I will pray for you, ", "You're a lucky woman, ", "Not everything is perfect, "]
-                print(choice(list) + wife.lower().capitalize() + ".")
+                print(choice(("I will pray for you, ", "You're a lucky woman, ", "Not everything is perfect, ")) + wife.lower().capitalize() + ".")
                 break
             else:
                 continue
@@ -146,21 +137,18 @@ def get_relationship():
             if relationship.lower() == 'dating':
                 boyfriend = question_renderer("What's his name?")
                 typing(1)
-                list = ["I will pray for you, ", "You're a lucky man, ", "Not everything is perfect, "]
-                print(choice(list) + boyfriend.lower().capitalize() + ".")
+                print(choice(("I will pray for you, ", "You're a lucky man, ", "Not everything is perfect, ")) + boyfriend.lower().capitalize() + ".")
                 break
             elif relationship.lower() == 'single':
                 typing(1)
-                list = ["Try to be cool sometimes with people too.", "Best thing in life.", "One day you find someone, you're so cool."]
-                print(choice(list))
+                print(choice(("Try to be cool sometimes with people too.", "Best thing in life.", "One day you find someone, you're so cool.")))
                 break
             elif relationship.lower() == 'married':
                 typing(2)
                 print("What's his name?")
                 husband = input("~ ")
                 typing(2)
-                list = ["I will pray for you, ", "You're a lucky man, ", "Not everything is perfect, "]
-                print(choice(list) + husband.lower().capitalize() + ".")
+                print(choice(("I will pray for you, ", "You're a lucky man, ", "Not everything is perfect, ")) + husband.lower().capitalize() + ".")
                 break
             else:
                 typing(2)
@@ -175,14 +163,12 @@ def get_pet():
             continue
         elif pet.lower() == 'yes':
             pet_name = question_renderer("What's his name?")
-            list = [ "I love this name.", "My pet have the same name.", "I'll put that name on my new pet."]
             typing(2)
-            print(choice(list))
+            print(choice(("I love this name.", "My pet have the same name.", "I'll put that name on my new pet.")))
             break
         elif pet.lower() == 'no':
-            list = [ "You should have one.", "They make a lot of mess.", "Everyone should have one at least once."]
             typing(2)
-            print(choice(list))
+            print(choice(("You should have one.", "They make a lot of mess.", "Everyone should have one at least once.")))
             break
 
 
@@ -193,8 +179,7 @@ def get_band():
             continue
         else:
             typing(3)
-            list = ["I like too, once I went to a show in New York and it was really good. I have all the albums.", "I do not like it very much.", "I listened these days and I liked it a lot."]
-            print(choice(list))
+            print(choice(("I like too, once I went to a show in New York and it was really good. I have all the albums.", "I do not like it very much.", "I listened these days and I liked it a lot.")))
             break
 
 
@@ -205,8 +190,7 @@ def get_movie():
             continue
         else:
             typing(3)
-            list = ["I love this movie! There are some things that I would change, but in general it's amazing.", "It's not my favorite movie.", "I loved the end of the movie.","I've watched this movie 5 times."]
-            print(choice(list))
+            print(choice(("I love this movie! There are some things that I would change, but in general it's amazing.", "It's not my favorite movie.", "I loved the end of the movie.","I've watched this movie 5 times.")))
             break
 
 
